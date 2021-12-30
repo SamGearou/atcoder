@@ -9,10 +9,6 @@ import java.util.StringTokenizer;
 // Iroha's Obsession
 public class IrohasObsession {
 
-    public static void main(String[] args) throws IOException {
-        IrohasObsession.solution();
-    }
-
     private static void solution() throws IOException {
         MyScanner scanner = new MyScanner();
         int n = scanner.nextInt();
@@ -33,7 +29,10 @@ public class IrohasObsession {
             return sb.toString();
         }
         int digit = Integer.parseInt(sb.charAt(i) + "");
-        if (Integer.parseInt(sb.toString()) > n && i > 0) {
+        StringBuilder temp = new StringBuilder();
+        temp.append(sb);
+        temp.setCharAt(i, '0');
+        if (Integer.parseInt(temp.toString()) > n && i > 0) {
             digit = 0;
         }
         while (forbidden.contains(digit)) {
@@ -78,3 +77,5 @@ public class IrohasObsession {
         }
     }
 }
+
+//Learnings: Think of edge cases very carefully here. Solution was correct eventually, but careful of stack overflows
