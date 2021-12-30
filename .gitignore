@@ -1,2 +1,5 @@
 # Ignore .idea files
 .idea/
+
+# Ignore generated build files
+target/
