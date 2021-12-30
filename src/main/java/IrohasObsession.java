@@ -78,4 +78,5 @@ public class IrohasObsession {
     }
 }
 
-//Learnings: Think of edge cases very carefully here. Solution was correct eventually, but careful of stack overflows
+// Learnings: Think of edge cases very carefully here. Solution was correct eventually, but careful of stack overflows
+// Much simpler solution: Loop from N - 100,000 and check the minimum number that works
