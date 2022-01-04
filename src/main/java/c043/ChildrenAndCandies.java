@@ -1,28 +1,19 @@
+package c043;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.HashMap;
 import java.util.StringTokenizer;
 
-// Iroha and Haiku (ABC Edition)
-public class IrohaAndHaiku {
+// Children and Candies
+public class ChildrenAndCandies {
 
     private static void solution() throws IOException {
         MyScanner scanner = new MyScanner();
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(a, map.getOrDefault(a, 0) + 1);
-        map.put(b, map.getOrDefault(b, 0) + 1);
-        map.put(c, map.getOrDefault(c, 0) + 1);
+        int numCandies = scanner.nextInt();
         PrintWriter printWriter = new PrintWriter(System.out);
-        if (map.getOrDefault(5, 0) == 2 && map.getOrDefault(7, 0) == 1) {
-            printWriter.println("YES");
-        } else {
-            printWriter.println("NO");
-        }
+        printWriter.println((numCandies * (numCandies + 1)) / 2);
         printWriter.close();
     }
 
